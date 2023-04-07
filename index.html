@@ -794,4 +794,20 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script src="js/GVm75Ru29G8U.js" id="elementor-frontend-js"></script>
 <script src="js/aMBdEhwKUs69.js" id="pro-elements-handlers-js"></script>
 </body>
+<script type="text/javascript">
+var back_redirect_back_link = '/redirect'+ location.search;
+// Não altere daqui para baixo
+history.pushState({}, "", location.href);
+history.pushState({}, "", location.href);
+
+window.addEventListener('popstate', function (event) {
+    if (event.state) {
+        setTimeout(function () {
+
+            location.href = back_redirect_back_link;
+        }, 1);
+    }
+}, false);
+
+</script>
 </html>
